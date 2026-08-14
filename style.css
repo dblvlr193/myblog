@@ -771,3 +771,102 @@ body.dark-theme .era-block ul {
 body.dark-theme .highlighted-era {
   background: #0f172a;
 }
+/* Font elegante per i titoli come Edoardo Crena */
+h1, h2, .logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: 1px;
+}
+
+/* Font pulito per il testo */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #090a0f; /* Scuro ancora più profondo */
+}
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: radial-gradient(circle, rgba(20,20,30,1) 0%, rgba(9,10,15,1) 100%);
+}
+
+.hero-quote {
+  font-style: italic;
+  color: #a0aec0;
+  border-left: 3px solid #8b0000; /* Linea rossa elegante a sinistra o centrata */
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 20px 0 30px;
+}
+
+/* Pulsante rosso stile Crena */
+.btn-primary {
+  background-color: #8b0000;
+  color: #fff;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+
+/* Pulsante "Sostieni" con bordo dorato/sottile nel menu */
+.nav-sostieni {
+  border: 1px solid #d4af37;
+  color: #d4af37 !important;
+  padding: 6px 16px;
+  border-radius: 4px;
+}
+/* --- STILE PULSANTI HERO --- */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px; /* Spazio tra i due pulsanti */
+  justify-content: center; /* Centra i pulsanti */
+  margin-top: 30px;
+}
+
+/* Base comune per tutti i pulsanti della hero */
+.hero-buttons .btn {
+  padding: 12px 28px;
+  text-decoration: none !important; /* Rimuove sottolineatura */
+  font-weight: 600;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  font-family: 'Inter', sans-serif; /* O il tuo font sans-serif */
+  font-size: 0.9rem;
+  transition: all 0.3s ease; /* Animazione fluida al passaggio del mouse */
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+/* 1. PULSANTE PIENO (Rosso scuro) "LEGGI GLI ARTICOLI" */
+.btn-primary {
+  background-color: #8b0000; /* Rosso scuro/bordeaux */
+  color: #ffffff !important; /* Testo bianco forzato */
+  border: 1px solid #8b0000;
+}
+
+.btn-primary:hover {
+  background-color: #a00000; /* Rosso leggermente più chiaro al passaggio del mouse */
+  border-color: #a00000;
+}
+
+/* 2. PULSANTE OUTLINE (Trasparente/Bordo) "L'AUTRICE" */
+/* Qui sistemiamo il problema del blu e delleggibile */
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6); /* Bordo bianco semi-trasparente */
+  color: #ffffff !important; /* TESTO BIANCO FORZATO - Risolve il problema del blu */
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Leggero sfondo bianco al passaggio del mouse */
+  border-color: #ffffff; /* Bordo diventa bianco pieno */
+  color: #ffffff !important;
+}
+
+/* Gestione stati specifici dei link per evitare il blu del browser */
+.hero-buttons a:link, 
+.hero-buttons a:visited, 
+.hero-buttons a:active {
+  text-decoration: none;
+}
