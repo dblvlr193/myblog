@@ -65,6 +65,37 @@
         <button type="submit" class="submit-btn">Invia Richiesta 🚀</button>
       </form>
     </section>
+    <!-- Sezione Modulo Commenti / Messaggi -->
+<section style="max-width: 600px; margin: 40px auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #eee;">
+  <h3 style="margin-top: 0; color: #333;">Lascia un commento o un messaggio 💬</h3>
+  <p style="font-size: 0.9em; color: #666; margin-bottom: 20px;">
+      Vuoi dire la tua su questo articolo o inviare un messaggio alla redazione? Scrivi qui sotto!
+  </p>
+
+  <!-- SOSTITUISCI L'URL NELL'ACTION CON IL TUO LINK FORMSPREE -->
+  <form action="https://formspree.io/f/mqpzlwjb" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+      
+      <div>
+          <label for="nome" style="display: block; font-weight: bold; margin-bottom: 5px;">Il tuo nome o nickname:</label>
+          <input type="text" id="nome" name="name" required placeholder="Es. Marco" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+      </div>
+
+      <div>
+          <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px;">La tua Email (opzionale):</label>
+          <input type="email" id="email" name="_replyto" placeholder="nome@esempio.it" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+      </div>
+
+      <div>
+          <label for="messaggio" style="display: block; font-weight: bold; margin-bottom: 5px;">Il tuo commento:</label>
+          <textarea id="messaggio" name="message" rows="5" required placeholder="Scrivi qui il tuo pensiero..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+      </div>
+
+      <button type="submit" style="background-color: #007bff; color: white; padding: 12px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 1em;">
+          Invia commento 🚀
+      </button>
+
+  </form>
+</section>
   </main>
 
   <script src="script.js"></script>
