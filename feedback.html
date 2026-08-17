@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supporta il Progetto | Calcio & Passione</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+    <!-- Header (Menu) -->
+    <header class="main-header">
+        <div class="logo-container">
+            <a href="index.html" class="logo">Calcio & Passione</a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#articoli">Serie A</a>
+            <a href="index.html#articoli">Juventus</a>
+            <a href="chi-sono.html">L'Autrice</a>
+            <a href="feedback.html" class="active">Progetto ⚽</a>
+            <a href="https://ko-fi.com/gobbadal1993" target="_blank" rel="noopener noreferrer" class="nav-sostieni">Sostieni ☕</a>
+        </nav>
+    </header>
+
+    <!-- Sezione Caricamento Progetto -->
+    <main class="about-container">
+        <div class="about-card text-center">
+            
+            <div class="ball-container">
+                <div class="ball-glow">⚽</div>
+            </div>
+
+            <p class="loading-text">CARICAMENTO STAGIONE 2026-27... <span id="percent-text">73%</span></p>
+            
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+
+            <p class="feedback-prompt">
+                Alimenta il mio sogno! Ogni tuo feedback accelera la fase di caricamento e mi aiuta a migliorare i contenuti del blog.
+            </p>
+            
+            <button class="feedback-btn" onclick="inviaFeedback()">MANDA UN FEEDBACK ⚽</button>
+
+        </div>
+    </main>
+
+    <!-- JavaScript Animazione -->
+    <script>
+        function inviaFeedback() {
+            const fill = document.getElementById('progress-fill');
+            const percent = document.getElementById('percent-text');
+            const button = document.querySelector('.feedback-btn');
+
+            button.disabled = true;
+            button.innerText = "GRAZIE! ⚽";
+
+            // Animazione della barra
+            fill.style.width = '85%';
+            
+            setTimeout(() => {
+                percent.innerText = "85%";
+                // Inserisci qui il link al tuo Google Form o modulo di contatto
+                window.open("https://forms.google.com", "_blank");
+            }, 800); 
+        }
+    </script>
+
+</body>
+</html>
