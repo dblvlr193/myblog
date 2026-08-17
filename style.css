@@ -977,3 +977,47 @@ body {
 .btn-social.yt { background-color: #ff0000; }
 .btn-social.tt { background-color: #000000; border: 1px solid #333; }
 .btn-social.ig { background-color: #e1306c; }
+/* --- OTTIMIZZAZIONE MOBILE (Media Query) --- */
+@media (max-width: 768px) {
+
+  /* 1. Riduciamo le dimenioni dei testi per non occupare tutto lo schermo */
+  .hero-section h1, 
+  .hero-title {
+      font-size: 1.8rem !important;
+  }
+
+  .hero-quote {
+      font-size: 0.95rem !important;
+      padding: 0 10px;
+  }
+
+  /* 2. Disponiamo i pulsanti in verticale anziché in orizzontale */
+  .hero-buttons,
+  .social-buttons {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+  }
+
+  .hero-buttons .btn,
+  .btn-social {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0; /* Più facili da toccare con il pollice */
+  }
+
+  /* 3. Aggiustiamo i margini interni per schermi piccoli */
+  .about-card,
+  .hero-section {
+      padding: 25px 15px !important;
+  }
+
+  /* 4. Menu di navigazione più pulito e distanziato */
+  .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      font-size: 0.9rem;
+  }
+}
