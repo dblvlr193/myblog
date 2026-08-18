@@ -1379,11 +1379,22 @@ body {
   background-color: #0055A5;
 }
 .notice-overlay {
-  /* ...altri stili... */
-  pointer-events: auto; /* Attivo solo quando visibile */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  backdrop-filter: blur(5px);
 }
 
-.notice-overlay.hidden {
+/* AGGIUNGI QUESTA CLASSE IN FONDO AL CSS */
+.notice-overlay.is-hidden {
   display: none !important;
   pointer-events: none !important;
 }
