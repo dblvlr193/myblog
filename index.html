@@ -24,7 +24,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
+  <!-- OVERLAY AVVISO IMPORTANTE -->
+<div id="notice-overlay" class="notice-overlay">
+  <div class="notice-modal">
+      <button class="close-btn" onclick="closeNotice()">&times;</button>
+      
+      <!-- Sostituisci avviso.png con il nome del tuo file immagine -->
+      <img src="avviso.png" alt="Avviso Importante Campionato" class="notice-image">
+      
+      <button class="enter-site-btn" onclick="closeNotice()">ENTRA NEL SITO ⚽</button>
+  </div>
+</div>
   <header>
     <div class="logo">
       <h1>⚪⚫ Calcio & Passione</h1>
@@ -56,6 +66,7 @@
   <a href="chi-sono.html" class="btn btn-outline">L'AUTRICE</a>
 </div>
 </section>
+
 
 <!-- 3. Il resto della tua pagina (le card degli articoli e la sidebar) -->
 <main class="main-content" id="articoli">
@@ -131,7 +142,11 @@
   <footer>
     <p>&copy; 2026 - gobbadal1993 • Tutti i diritti riservati</p>
   </footer>
-
+  <script>
+    function closeNotice() {
+        document.getElementById('notice-overlay').style.display = 'none';
+    }
+</script>
   <script src="script.js"></script>
   <button id="back-to-top" aria-label="Torna in alto">⬆</button>
 </body>

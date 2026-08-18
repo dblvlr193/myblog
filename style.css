@@ -1102,3 +1102,279 @@ body {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+/* ==========================================================
+   PALETTE COLORI & STILI - GAZZETTA STYLE (Senza Titoli Neri)
+   ========================================================== */
+
+   :root {
+    /* Palette Colori */
+    --gazzetta-pink: #FFA5B4;         /* Rosa Gazzetta di fondo */
+    --gazzetta-pink-light: #FFF0F3;   /* Rosa chiarissimo per card/righe */
+    --gazzetta-pink-dark: #C82D52;    /* Rosa/Magenta scuro per TITOLI */
+    --gazzetta-pink-border: #E68A9A;  /* Rosa medio per bordi */
+    
+    --gazzetta-black: #111111;        /* Inchiostro (usato solo per testi brevi) */
+    --gazzetta-body-text: #2B2B2B;   /* Testo di lettura */
+    
+    --gazzetta-blue: #0055A5;         /* Blu per Sezioni/Header */
+    --gazzetta-blue-dark: #003D7A;    
+    
+    --gazzetta-red: #D00000;          /* Rosso Occhielli/Diretta */
+    --gazzetta-white: #FFFFFF;
+  
+    /* Tipografia */
+    --font-heading: 'Impact', 'Arial Black', sans-serif;
+    --font-body: 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  /* Reset Base */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: var(--gazzetta-pink);
+    color: var(--gazzetta-body-text);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    padding: 20px;
+  }
+  
+  /* ----------------------------------------------------------
+     INTESTAZIONE / HEADER (Rosa con Titolo Blu/Bianco)
+     ---------------------------------------------------------- */
+  .header-gazzetta {
+    background-color: var(--gazzetta-white);
+    color: var(--gazzetta-pink-dark);
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 5px solid var(--gazzetta-pink-dark);
+  }
+  
+  .header-gazzetta h1 {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gazzetta-pink-dark); /* Titolo testata in Rosa Scuro */
+  }
+  
+  /* ----------------------------------------------------------
+     CONTAINER
+     ---------------------------------------------------------- */
+  .container {
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: var(--gazzetta-white);
+    padding: 25px;
+    border: 2px solid var(--gazzetta-pink-dark);
+    box-shadow: 6px 6px 0px var(--gazzetta-pink-border);
+  }
+  
+  /* ----------------------------------------------------------
+     TITOLI & TIPOGRAFIA (NO NERO)
+     ---------------------------------------------------------- */
+  /* Titoli Generali in Rosa Scuro/Magenta */
+  h1, h2, h3 {
+    color: var(--gazzetta-pink-dark);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+  }
+  
+  /* Titolone Articolo Principale */
+  h2.titolo-notizia {
+    font-size: 2.4rem;
+    line-height: 1.05;
+    color: var(--gazzetta-pink-dark); /* Rosa scuro/Magenta */
+    border-bottom: 2px solid var(--gazzetta-pink-border);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  
+  /* Titolo Alternativo in Blu Gazzetta */
+  h2.titolo-blu {
+    color: var(--gazzetta-blue);
+    font-size: 2rem;
+  }
+  
+  .occhiello {
+    color: var(--gazzetta-red);
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .sommario {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #555555;
+    margin-bottom: 15px;
+  }
+  
+  /* ----------------------------------------------------------
+     BADGE & ETICHETTE
+     ---------------------------------------------------------- */
+  .badge-diretta {
+    background-color: var(--gazzetta-red);
+    color: var(--gazzetta-white);
+    font-weight: bold;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  
+  .badge-sport {
+    background-color: var(--gazzetta-blue);
+    color: var(--gazzetta-white);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  
+  /* ----------------------------------------------------------
+     CARD & BOX RISULTATI
+     ---------------------------------------------------------- */
+  .card-risultati {
+    background-color: var(--gazzetta-pink-light);
+    border: 2px solid var(--gazzetta-pink-border);
+    padding: 15px;
+    margin: 20px 0;
+  }
+  
+  .card-risultati h3 {
+    background-color: var(--gazzetta-blue);
+    color: var(--gazzetta-white); /* Testo bianco su sfondo blu */
+    padding: 6px 12px;
+    margin: -15px -15px 15px -15px;
+    font-size: 1.2rem;
+  }
+  
+  /* ----------------------------------------------------------
+     TABELLE (Classifiche)
+     ---------------------------------------------------------- */
+  .tabella-gazzetta {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .tabella-gazzetta th {
+    background-color: var(--gazzetta-pink-dark);
+    color: var(--gazzetta-white);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .tabella-gazzetta td {
+    padding: 10px;
+    border-bottom: 1px solid var(--gazzetta-pink-border);
+  }
+  
+  .tabella-gazzetta tr:nth-child(even) {
+    background-color: var(--gazzetta-pink-light);
+  }
+  
+  /* ----------------------------------------------------------
+     BOTTONI
+     ---------------------------------------------------------- */
+  .btn-gazzetta {
+    background-color: var(--gazzetta-pink-dark);
+    color: var(--gazzetta-white);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-gazzetta:hover {
+    background-color: var(--gazzetta-blue);
+    color: var(--gazzetta-white);
+  }
+  /* ==========================================================
+   OVERLAY AVVISO IMPORTANTE SCHERMO INTERO
+   ========================================================== */
+
+.notice-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.notice-modal {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.notice-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.enter-site-btn {
+  margin-top: 15px;
+  width: 100%;
+  background-color: #D00000;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.2s ease;
+}
+
+.enter-site-btn:hover {
+  background-color: #0055A5;
+}
